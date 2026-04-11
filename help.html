@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Help & Support — Stashback</title>
+  <meta name="description" content="Guides and answers for Stashback — the Shopify backup and restore app. Learn how to back up your store, restore data, manage plans, and more." />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .help-hero { background: linear-gradient(160deg, #f0fdf4 0%, #f8fafc 60%); padding: 5rem 2rem 4rem; text-align: center; }
+    .help-hero h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; color: var(--navy); margin-bottom: 1rem; }
+    .help-hero p { font-size: 1.1rem; color: var(--gray); }
+
+    .help-body { max-width: 860px; margin: 0 auto; padding: 4rem 2rem; }
+
+    .help-toc { background: var(--gray-light); border: 1px solid var(--border); border-radius: 10px; padding: 1.5rem 2rem; margin-bottom: 3rem; }
+    .help-toc h2 { font-size: .85rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--gray); margin-bottom: .75rem; }
+    .help-toc ol { margin: 0; padding-left: 1.25rem; }
+    .help-toc li { margin-bottom: .35rem; }
+    .help-toc a { color: var(--green); text-decoration: none; font-size: .95rem; }
+    .help-toc a:hover { text-decoration: underline; }
+
+    .help-section { margin-bottom: 3.5rem; }
+    .help-section h2 { font-size: 1.4rem; font-weight: 800; color: var(--navy); border-bottom: 2px solid var(--border); padding-bottom: .6rem; margin-bottom: 1.5rem; }
+    .help-section h3 { font-size: 1rem; font-weight: 700; color: var(--navy); margin: 1.5rem 0 .5rem; }
+    .help-section p { color: var(--text); line-height: 1.7; margin-bottom: .75rem; }
+    .help-section ul, .help-section ol { color: var(--text); line-height: 1.7; padding-left: 1.4rem; margin-bottom: .75rem; }
+    .help-section li { margin-bottom: .35rem; }
+
+    .help-note { background: #f0fdf4; border-left: 4px solid var(--green); border-radius: 0 8px 8px 0; padding: .9rem 1.1rem; margin: 1rem 0; font-size: .92rem; color: var(--navy); }
+    .help-warning { background: #fffbeb; border-left: 4px solid #f59e0b; border-radius: 0 8px 8px 0; padding: .9rem 1.1rem; margin: 1rem 0; font-size: .92rem; color: #78350f; }
+
+    .plan-badge { display: inline-block; font-size: .72rem; font-weight: 700; padding: .15rem .5rem; border-radius: 4px; vertical-align: middle; margin-left: .35rem; text-transform: uppercase; letter-spacing: .04em; }
+    .badge-starter { background: #e0f2fe; color: #0369a1; }
+    .badge-growth  { background: #dcfce7; color: #166534; }
+    .badge-pro     { background: #ede9fe; color: #6d28d9; }
+    .badge-all     { background: var(--gray-light); color: var(--gray); border: 1px solid var(--border); }
+
+    .resource-table { width: 100%; border-collapse: collapse; font-size: .88rem; margin: 1rem 0 1.5rem; }
+    .resource-table th { text-align: left; padding: .6rem .75rem; border-bottom: 2px solid var(--border); color: var(--navy); font-weight: 700; }
+    .resource-table td { padding: .55rem .75rem; border-bottom: 1px solid var(--border); color: var(--text); vertical-align: top; }
+    .resource-table tr:last-child td { border-bottom: none; }
+    .check { color: var(--green); font-weight: 700; }
+    .dash  { color: var(--border); }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="/">Stash<span>back</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html#features">Features</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="https://apps.shopify.com/stashback" class="btn btn-primary">Install free</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="help-hero">
+  <div class="hero-badge">Help & Support</div>
+  <h1>How can we help?</h1>
+  <p>Everything you need to know about backing up and restoring your Shopify store with Stashback.</p>
+</div>
+
+<div class="help-body">
+
+  <nav class="help-toc">
+    <h2>Contents</h2>
+    <ol>
+      <li><a href="#getting-started">Getting started</a></li>
+      <li><a href="#backups">Creating backups</a></li>
+      <li><a href="#scheduling">Automated schedules</a></li>
+      <li><a href="#what-is-backed-up">What gets backed up</a></li>
+      <li><a href="#restore">Restoring your store</a></li>
+      <li><a href="#restore-limitations">Restore limitations</a></li>
+      <li><a href="#cross-store">Claiming backups from a previous store</a></li>
+      <li><a href="#plans">Plans &amp; billing</a></li>
+      <li><a href="#storage">Storage &amp; retention</a></li>
+      <li><a href="#security">Security &amp; encryption</a></li>
+      <li><a href="#notifications">Failure notifications</a></li>
+      <li><a href="#contact">Still need help?</a></li>
+    </ol>
+  </nav>
+
+  <!-- 1. Getting started -->
+  <section class="help-section" id="getting-started">
+    <h2>1. Getting started</h2>
+
+    <h3>How do I install Stashback?</h3>
+    <p>Search for <strong>Stashback</strong> in the <a href="https://apps.shopify.com/stashback">Shopify App Store</a> and click <em>Install</em>. The app is free to install — no credit card required.</p>
+
+    <h3>What happens after I install?</h3>
+    <p>On your first visit you'll be asked whether you're starting a new store or want to claim backups from a previous store. If you're starting fresh, click <em>Start fresh</em> and you'll land on the dashboard. Your first manual backup is ready to run immediately.</p>
+
+    <h3>Does the Free plan cost anything?</h3>
+    <p>No. The Free plan is free forever. It gives you one manual backup per day so you can protect your store without a subscription. Upgrade any time to get automated schedules, longer history, and restore.</p>
+  </section>
+
+  <!-- 2. Backups -->
+  <section class="help-section" id="backups">
+    <h2>2. Creating backups</h2>
+
+    <h3>How do I run a manual backup?</h3>
+    <p>From the dashboard, click <strong>Back Up Now</strong>. A progress bar will appear and update in real time. Depending on the size of your store, a full backup typically takes a few minutes.</p>
+
+    <h3>How many manual backups can I run per day?</h3>
+    <table class="resource-table">
+      <thead><tr><th>Plan</th><th>Manual backups per day</th></tr></thead>
+      <tbody>
+        <tr><td>Free</td><td>1</td></tr>
+        <tr><td>Starter</td><td>1</td></tr>
+        <tr><td>Growth</td><td>3</td></tr>
+        <tr><td>Pro</td><td>Unlimited</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Can I download my backup file?</h3>
+    <p>Yes. From the <strong>Backups</strong> page, click the download icon next to any completed backup. You'll receive a <code>.tar.gz</code> archive containing your data as NDJSON files, plus any product images and theme assets that were captured.</p>
+    <div class="help-note">Download links expire after 1 hour. If your link has expired, simply click the download icon again to generate a new one.</div>
+
+    <h3>Can I upload a backup file?</h3>
+    <p>Yes. On the <strong>Backups</strong> page, click <em>Upload backup file</em> and select a <code>.tar.gz</code> file previously downloaded from Stashback. Once uploaded it appears in your backup history and can be used for a restore.</p>
+
+    <h3>How do I delete a backup?</h3>
+    <p>On the <strong>Backups</strong> page, use the delete action on any backup row. Deletion is permanent — deleted backups cannot be recovered.</p>
+  </section>
+
+  <!-- 3. Scheduling -->
+  <section class="help-section" id="scheduling">
+    <h2>3. Automated schedules</h2>
+
+    <h3>How do I turn on automatic backups?</h3>
+    <p>Go to <strong>Schedule</strong> in the app navigation, toggle <em>Enable automatic backups</em>, choose your frequency, and click <strong>Save</strong>. Stashback will run backups on your schedule automatically — no action required.</p>
+
+    <h3>What frequencies are available?</h3>
+    <ul>
+      <li><strong>Daily</strong> — available on Starter, Growth, and Pro plans.</li>
+      <li><strong>Hourly</strong> — available on the Pro plan only.</li>
+    </ul>
+    <p>Automated scheduling is not available on the Free plan.</p>
+
+    <h3>What time zone are scheduled backups run in?</h3>
+    <p>Schedules run in UTC. The app displays the next and last backup times converted to your local browser time for convenience.</p>
+  </section>
+
+  <!-- 4. What gets backed up -->
+  <section class="help-section" id="what-is-backed-up">
+    <h2>4. What gets backed up</h2>
+    <p>The resources included in your backup depend on your plan.</p>
+
+    <table class="resource-table">
+      <thead>
+        <tr>
+          <th>Resource</th>
+          <th>Free</th>
+          <th>Starter</th>
+          <th>Growth</th>
+          <th>Pro</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Products (variants, images, metafields, SEO)</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr><td>Collections (smart &amp; manual)</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr><td>Pages (HTML content, SEO)</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr><td>Blogs &amp; articles</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr><td>Navigation menus</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr><td>Metaobjects &amp; definitions</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr><td>Shop policies</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr><td>Orders (line items, transactions, fulfillments)</td><td class="dash">—</td><td class="dash">—</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr><td>Customers (addresses, tags, metafields)</td><td class="dash">—</td><td class="dash">—</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr><td>Discounts &amp; price rules</td><td class="dash">—</td><td class="dash">—</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr><td>Themes (all .liquid, .json, .css, .js assets)</td><td class="dash">—</td><td class="dash">—</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr><td>Files (images, documents, video)</td><td class="dash">—</td><td class="dash">—</td><td class="dash">—</td><td class="check">✓</td></tr>
+        <tr><td>Shipping profiles &amp; zones</td><td class="dash">—</td><td class="dash">—</td><td class="dash">—</td><td class="check">✓</td></tr>
+        <tr><td>Locations &amp; inventory levels</td><td class="dash">—</td><td class="dash">—</td><td class="dash">—</td><td class="check">✓</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Are product images included in the backup?</h3>
+    <p>Yes. Product images are downloaded into the backup archive so they remain available even if the original Shopify CDN URL later becomes unavailable (e.g. if the product is deleted).</p>
+  </section>
+
+  <!-- 5. Restore -->
+  <section class="help-section" id="restore">
+    <h2>5. Restoring your store</h2>
+    <p>Restore is available on <span class="plan-badge badge-starter">Starter</span> <span class="plan-badge badge-growth">Growth</span> <span class="plan-badge badge-pro">Pro</span> plans.</p>
+
+    <h3>How do I start a restore?</h3>
+    <ol>
+      <li>Go to the <strong>Restore</strong> page.</li>
+      <li>Find the backup you want to restore from and click <strong>Restore</strong>.</li>
+      <li>In the modal, tick the resource types you want to restore (or use <em>Select all</em>).</li>
+      <li>Review the warning and click <strong>Start Restore</strong>.</li>
+    </ol>
+    <p>A live progress bar will appear showing the current resource being processed. You can navigate away — the restore continues in the background and the progress resumes when you return.</p>
+
+    <h3>What does a restore do to existing data?</h3>
+    <p>Restore uses an <strong>upsert</strong> approach — it updates existing records if they match by handle (for most resources) or email (for customers), and creates them if they don't exist. It does not delete records that are present in your store but absent from the backup.</p>
+
+    <h3>Can I restore just some resource types?</h3>
+    <p>Yes. The restore modal lets you choose individual resource types — for example, you can restore only Products and Collections without touching Customers or Themes.</p>
+
+    <h3>Can only one restore run at a time?</h3>
+    <p>Yes. Only one restore job can run per store at a time. The <em>Start Restore</em> button is disabled while a restore is in progress.</p>
+
+    <h3>How does theme restore work?</h3>
+    <p>Restored themes are created as a <strong>new unpublished theme</strong> named <em>Restored — {original name} — {date}</em>. Your currently published theme is never overwritten. You can preview and publish the restored theme from your Shopify admin when you're ready.</p>
+  </section>
+
+  <!-- 6. Restore limitations -->
+  <section class="help-section" id="restore-limitations">
+    <h2>6. Restore limitations</h2>
+    <div class="help-warning">These are hard limits imposed by the Shopify API — they are not Stashback limitations that will be resolved in a future release.</div>
+
+    <ul>
+      <li><strong>Orders</strong> — Shopify does not allow historical orders to be created via the API. Order data is preserved in your backup for reference, but orders cannot be restored into your store.</li>
+      <li><strong>Customer passwords</strong> — Shopify never exposes passwords via the API. Customer accounts are restored without passwords; customers will need to reset their password on first login.</li>
+      <li><strong>Shopify Payments data</strong> — Payment method and transaction records cannot be restored.</li>
+      <li><strong>Third-party app data</strong> — Data belonging to other Shopify apps (e.g. review apps, loyalty programs) is not captured and cannot be restored.</li>
+      <li><strong>Sales channel publications</strong> — Collections and products are not automatically re-published to their original sales channels (e.g. Online Store, POS) after a restore. You will need to re-publish them manually.</li>
+      <li><strong>Inventory quantities</strong> — Inventory levels are not written during a restore. Inventory is managed separately via the Shopify Inventory API.</li>
+      <li><strong>File URLs</strong> — File URLs may change after a restore.</li>
+      <li><strong>Discount codes</strong> — Price rules are restored by title, but associated discount codes are not.</li>
+    </ul>
+  </section>
+
+  <!-- 7. Cross-store restore -->
+  <section class="help-section" id="cross-store">
+    <h2>7. Claiming backups from a previous store</h2>
+
+    <h3>My old Shopify store was closed — can I still access my backups?</h3>
+    <p>Yes. If your previous store has been closed, suspended, or deleted, you can claim its backups into a new store using the <strong>cross-store claim</strong> feature.</p>
+
+    <h3>How does claiming work?</h3>
+    <ol>
+      <li>Install Stashback on your new store.</li>
+      <li>On the onboarding screen, choose <em>Claim backups from a previous store</em>. (You can also do this later via <strong>Settings → Linked Stores</strong>.)</li>
+      <li>Enter your previous store's domain (e.g. <code>old-store.myshopify.com</code>).</li>
+      <li>Enter the <strong>private key</strong> from your previous store. This key was shown on the Settings page of your previous Stashback installation — it's a long random string used to prove ownership.</li>
+      <li>If the key matches, your previous store's backups will appear in a <em>Claimed Backups</em> section on the Backups page. You can then restore from them into your new store.</li>
+    </ol>
+    <div class="help-warning">If you did not save your private key before your old store was closed, there is no way to recover it. Contact us and we will do our best to assist, but recovery cannot be guaranteed without the key.</div>
+
+    <h3>Where do I find my private key?</h3>
+    <p>In the Stashback app, go to <strong>Settings → Linked Stores</strong>. Your private key is displayed there with a copy button. Save it somewhere safe — treat it like a password.</p>
+
+    <h3>Can I claim backups from more than one previous store?</h3>
+    <p>Each store can hold one verified claim at a time. If you need to claim from multiple previous stores, please <a href="contact.html">contact us</a>.</p>
+  </section>
+
+  <!-- 8. Plans & billing -->
+  <section class="help-section" id="plans">
+    <h2>8. Plans &amp; billing</h2>
+
+    <h3>What plans are available?</h3>
+    <p>See the full comparison on the <a href="pricing.html">Pricing page</a>. In summary:</p>
+    <ul>
+      <li><strong>Free ($0)</strong> — 1 manual backup/day, 1 backup stored, no restore.</li>
+      <li><strong>Starter ($9/mo)</strong> — Daily automated backups, 30-day history, restore, 2 GB storage.</li>
+      <li><strong>Growth ($29/mo)</strong> — Daily backups, 90-day history, full coverage incl. orders &amp; customers, restore, 20 GB storage.</li>
+      <li><strong>Pro ($79/mo)</strong> — Hourly backups, 365-day history, all resources, dual-region storage, 100 GB. Includes a <strong>7-day free trial</strong>.</li>
+    </ul>
+
+    <h3>Does the Pro plan have a free trial?</h3>
+    <p>Yes — the Pro plan includes a 7-day free trial with full Pro access. No credit card is required to start the trial. When the trial ends, you'll be prompted to subscribe or your account will revert to the Free plan.</p>
+
+    <h3>How do I upgrade or downgrade?</h3>
+    <p>Go to <strong>Billing</strong> in the app and select a new plan. Upgrades take effect immediately. Billing is handled through Shopify's standard subscription system.</p>
+
+    <h3>How do I cancel?</h3>
+    <p>You can cancel your subscription at any time from your Shopify admin under <em>Apps → Stashback → Subscription</em>, or by uninstalling the app. Your data is retained for 48 hours after uninstall, then permanently deleted.</p>
+
+    <h3>Do you offer Enterprise pricing?</h3>
+    <p>Yes — Enterprise plans are available with custom retention periods, unlimited storage, hourly backups, and dual-region replication. <a href="contact.html">Contact us</a> for a quote.</p>
+  </section>
+
+  <!-- 9. Storage & retention -->
+  <section class="help-section" id="storage">
+    <h2>9. Storage &amp; retention</h2>
+
+    <h3>What is the storage cap on my plan?</h3>
+    <table class="resource-table">
+      <thead><tr><th>Plan</th><th>Storage cap</th><th>Retention</th></tr></thead>
+      <tbody>
+        <tr><td>Free</td><td>—</td><td>1 backup (latest only)</td></tr>
+        <tr><td>Starter</td><td>2 GB</td><td>30 days</td></tr>
+        <tr><td>Growth</td><td>20 GB</td><td>90 days</td></tr>
+        <tr><td>Pro</td><td>100 GB</td><td>365 days</td></tr>
+      </tbody>
+    </table>
+
+    <h3>What happens when I approach my storage limit?</h3>
+    <p>A warning banner appears in the app when you reach 80% of your plan's storage cap. You can free up space by deleting older backups, or upgrade to a plan with more storage.</p>
+
+    <h3>What happens when retention expires?</h3>
+    <p>Backups older than your plan's retention period are automatically deleted. For example, on the Starter plan, backups older than 30 days are pruned after each new backup completes.</p>
+
+    <h3>Where is my data stored?</h3>
+    <p>Backups are stored in Cloudflare R2 object storage (US region by default). Pro plans additionally replicate backups to an EU region bucket for dual-region redundancy.</p>
+  </section>
+
+  <!-- 10. Security -->
+  <section class="help-section" id="security">
+    <h2>10. Security &amp; encryption</h2>
+
+    <h3>Is my backup data encrypted?</h3>
+    <p>Yes — all backup data is encrypted at rest. Stashback uses two layers of encryption:</p>
+    <ul>
+      <li><strong>Storage-layer encryption (all plans):</strong> Cloudflare R2 encrypts every stored object using AES-256 at the storage layer by default. This is always on and requires no configuration.</li>
+      <li><strong>Application-layer encryption:</strong> Backups are additionally encrypted at the application level using AES-256-GCM before upload, so the storage provider only ever holds ciphertext. Each backup uses a unique random IV — keys are never reused.</li>
+    </ul>
+
+    <h3>Who can access my backups?</h3>
+    <p>Only your store's authenticated Stashback session can access your backups. Cross-store access requires your private key, which is shown only within your own Stashback dashboard.</p>
+
+    <h3>Does Stashback store my Shopify API credentials?</h3>
+    <p>Stashback stores the OAuth access token that Shopify issues when you install the app. This token is used solely to read and write your store data as described in our <a href="privacy.html">Privacy Policy</a>.</p>
+  </section>
+
+  <!-- 11. Notifications -->
+  <section class="help-section" id="notifications">
+    <h2>11. Failure notifications</h2>
+
+    <h3>How do I get notified if a backup fails?</h3>
+    <p>Go to <strong>Settings</strong> in the app, scroll to <em>Failure notifications</em>, enter your email address, and click <strong>Save</strong>. Stashback will send you an email whenever a scheduled or manual backup fails.</p>
+
+    <h3>How do I test that notifications are working?</h3>
+    <p>Once you've saved your email address, a <em>Send test email</em> button appears in the same section. Click it to receive a test notification immediately.</p>
+  </section>
+
+  <!-- 12. Contact -->
+  <section class="help-section" id="contact">
+    <h2>12. Still need help?</h2>
+    <p>If you have a question that isn't covered here, we're happy to help.</p>
+    <p><a href="contact.html" class="btn btn-primary">Contact support</a></p>
+  </section>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a class="nav-logo" href="/">Stash<span>back</span></a>
+      <p>Automated backup and restore for Shopify stores.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Product</h4>
+      <ul>
+        <li><a href="index.html#features">Features</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="https://apps.shopify.com/stashback">Install on Shopify</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms of Service</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Stashback. All rights reserved.</span>
+    <span><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
