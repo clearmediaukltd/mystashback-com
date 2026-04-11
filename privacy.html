@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Stashback</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="/">Stash<span>back</span></a>
+    <ul class="nav-links">
+      <li><a href="/#features">Features</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="https://apps.shopify.com/stashback" class="btn btn-primary">Install free</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="policy">
+  <h1>Privacy Policy</h1>
+  <p class="updated">Last updated: April 2026</p>
+
+  <p>Stashback ("we", "us", or "our") provides a backup and restore service for Shopify merchants. This Privacy Policy explains what data we collect, how we use it, and your rights in relation to it.</p>
+
+  <h2>1. Who we are</h2>
+  <p>Stashback is operated by Stashback Ltd. Our service is accessible at mystashback.com and through the Shopify App Store. For privacy enquiries, contact us at <a href="contact.html">our contact page</a>.</p>
+
+  <h2>2. Data we collect</h2>
+
+  <h3 style="font-size:1rem;font-weight:600;color:var(--navy);margin:.75rem 0 .5rem;">2a. Store data (backup content)</h3>
+  <p>When you run a backup, we retrieve data from your Shopify store via the Shopify Admin API and store it as an encrypted archive. Depending on your plan, this may include:</p>
+  <ul>
+    <li>Products, collections, inventory, and pricing</li>
+    <li>Orders and order line items</li>
+    <li>Customer names, email addresses, and shipping addresses</li>
+    <li>Theme files and store assets</li>
+    <li>Pages, blogs, articles, and navigation menus</li>
+    <li>Discount codes and price rules</li>
+    <li>Metaobjects and metafields</li>
+    <li>Shipping profiles, locations, and store policies</li>
+  </ul>
+  <p>This data is yours. We access it solely to perform the backup and restore services you request.</p>
+
+  <h3 style="font-size:1rem;font-weight:600;color:var(--navy);margin:.75rem 0 .5rem;">2b. Account and operational data</h3>
+  <ul>
+    <li><strong>Shop domain</strong> — used to identify your store and associate backup records</li>
+    <li><strong>Shopify access token</strong> — stored to allow the app to access your store on your behalf</li>
+    <li><strong>Subscription plan and status</strong> — used to enforce plan limits and process billing via Shopify</li>
+    <li><strong>Notification email</strong> — if you provide one, used only to send backup failure alerts</li>
+    <li><strong>Backup job records</strong> — metadata about each backup (size, status, timestamp); not the backup content itself</li>
+  </ul>
+
+  <h3 style="font-size:1rem;font-weight:600;color:var(--navy);margin:.75rem 0 .5rem;">2c. Contact form</h3>
+  <p>If you contact us via our website form, we collect your name, email address, and message. This data is used solely to respond to your enquiry.</p>
+
+  <h2>3. How we use your data</h2>
+  <ul>
+    <li>To create, store, and serve backups of your store</li>
+    <li>To restore your store data when you request it</li>
+    <li>To send backup failure notifications to your chosen email address</li>
+    <li>To enforce plan limits and process billing through Shopify</li>
+    <li>To maintain audit logs for security and compliance purposes</li>
+  </ul>
+  <p>We do not sell your data. We do not use your store data for advertising or analytics.</p>
+
+  <h2>4. Data storage and security</h2>
+  <p>Backup archives are stored in Cloudflare R2 object storage. Pro plan merchants have their backups stored in both US and EU regions simultaneously. Operational data (subscription records, job metadata) is stored in a PostgreSQL database hosted on Heroku.</p>
+  <p>Access to stored data is restricted to authenticated requests. Shopify access tokens are stored encrypted at rest.</p>
+
+  <h2>5. Data retention</h2>
+  <p>Backup archives are retained according to your plan's history limit (e.g. 30, 90, or 365 days). Older backups are automatically deleted when a new backup would exceed your plan's storage cap.</p>
+  <p>When you uninstall Stashback, your session data is immediately deleted. All remaining data — backup archives and account records — is permanently deleted 48 hours after uninstall, in accordance with Shopify's GDPR requirements.</p>
+
+  <h2>6. Your rights</h2>
+  <p>Under GDPR and applicable data protection law, you have the right to:</p>
+  <ul>
+    <li>Access the personal data we hold about you</li>
+    <li>Request correction or deletion of your data</li>
+    <li>Object to processing of your data</li>
+    <li>Data portability — you can download any backup archive from within the app at any time</li>
+  </ul>
+  <p>To exercise any of these rights, contact us via our <a href="contact.html">contact page</a>.</p>
+
+  <h2>7. Customer data within backups</h2>
+  <p>Your backup archives contain personal data belonging to your customers (names, email addresses, order history). You are the data controller for this information; we process it as a data processor acting on your behalf.</p>
+  <p>When Shopify notifies us of a customer data deletion request (<code>customers/redact</code>), we log the request. Note that backup archives are point-in-time snapshots stored as binary files — individual customer records cannot be selectively redacted from an existing archive. If a customer requests complete erasure, we recommend deleting all backup archives that may contain their data from within the app.</p>
+
+  <h2>8. Third-party services</h2>
+  <ul>
+    <li><strong>Shopify</strong> — we access your store via the Shopify Admin API under your authorisation. Shopify's privacy policy governs the Shopify platform.</li>
+    <li><strong>Cloudflare R2</strong> — used to store backup archives. Cloudflare's privacy policy applies.</li>
+    <li><strong>Heroku (Salesforce)</strong> — used to host the application and database. Heroku's privacy policy applies.</li>
+    <li><strong>SendGrid (Twilio)</strong> — used to send backup failure notification emails if you configure an email address. SendGrid's privacy policy applies.</li>
+  </ul>
+
+  <h2>9. Cookies</h2>
+  <p>The Stashback web app (embedded in Shopify admin) uses a session cookie to maintain your authenticated session. Our marketing website (mystashback.com) does not use tracking or analytics cookies.</p>
+
+  <h2>10. Changes to this policy</h2>
+  <p>We may update this policy from time to time. Material changes will be notified via the app or by email. Continued use of the service after changes constitutes acceptance of the updated policy.</p>
+
+  <h2>11. Contact</h2>
+  <p>For any privacy-related questions or requests, please use our <a href="contact.html">contact form</a>.</p>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a class="nav-logo" href="/">Stash<span>back</span></a>
+      <p>Automated backup and restore for Shopify stores.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Product</h4>
+      <ul>
+        <li><a href="/#features">Features</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="https://apps.shopify.com/stashback">Install on Shopify</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms of Service</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Stashback. All rights reserved.</span>
+    <span><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
