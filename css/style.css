@@ -15,7 +15,7 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   color: var(--text);
   line-height: 1.6;
   background: var(--white);
@@ -152,13 +152,77 @@ footer { border-top: 1px solid var(--border); padding: 3rem 2rem; }
 /* CONTACT PAGE */
 .contact-hero { background: var(--gray-light); padding: 4rem 2rem; text-align: center; }
 
-/* RESPONSIVE */
+/* HAMBURGER TOGGLE */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px 4px;
+  flex-shrink: 0;
+}
+.nav-toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--navy);
+  border-radius: 2px;
+  transition: transform .2s, opacity .15s;
+}
+
+/* TABLE SCROLL WRAPPER */
+.table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+/* RESPONSIVE — tablet: shrink table font */
+@media (max-width: 860px) {
+  .compare-table th, .compare-table td { padding: .7rem .5rem; font-size: .82rem; }
+  .plan-th .price { font-size: 1.2rem; }
+}
+
+/* RESPONSIVE — mobile */
 @media (max-width: 640px) {
+  /* Nav */
   nav { padding: 0 1rem; }
-  .nav-links { gap: 1rem; }
-  .nav-links .btn { display: none; }
-  section { padding: 3.5rem 1.25rem; }
-  .hero { padding: 4rem 1.25rem; }
-  .form-card { padding: 1.5rem; }
-  .footer-inner { flex-direction: column; }
+  .logo-img { height: 32px; }
+  .nav-toggle { display: flex; }
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 64px; left: 0; right: 0;
+    background: rgba(255,255,255,.98);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 6px 20px rgba(0,0,0,.08);
+    flex-direction: column;
+    align-items: stretch;
+    padding: .5rem 1rem 1rem;
+    gap: 0;
+    z-index: 99;
+  }
+  nav.nav-open .nav-links { display: flex; }
+  .nav-links a { display: block; padding: .7rem .25rem; color: var(--navy); border-bottom: 1px solid var(--border); font-size: 1rem; }
+  .nav-links li:last-child a { border-bottom: none; }
+  .nav-links .btn { display: block !important; text-align: center; margin-top: .75rem; padding: .7rem 1rem; }
+  /* Hamburger → X */
+  nav.nav-open .nav-toggle span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  nav.nav-open .nav-toggle span:nth-child(2) { opacity: 0; }
+  nav.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  /* Sections */
+  section { padding: 3rem 1.25rem; }
+  .hero { padding: 3.5rem 1.25rem 3rem; }
+  .cta-band { padding: 3.5rem 1.25rem; }
+  .policy { padding: 2.5rem 1.25rem; }
+  .contact-hero { padding: 2.5rem 1.25rem; }
+
+  /* Cards */
+  .form-card { padding: 1.5rem; margin-left: 0; margin-right: 0; }
+  .plan-card { padding: 1.5rem; }
+
+  /* Footer */
+  .footer-inner { flex-direction: column; gap: 1.5rem; }
+  .footer-bottom { flex-direction: column; gap: .5rem; }
 }
