@@ -1,5 +1,10 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+/* Prevent any element from causing horizontal page scroll */
+html { overflow-x: hidden; }
+body { overflow-x: clip; max-width: 100%; }
+img, svg, video { max-width: 100%; }
+
 :root {
   --navy: #0f172a;
   --green: #16a34a;
@@ -174,7 +179,7 @@ footer { border-top: 1px solid var(--border); padding: 3rem 2rem; }
 }
 
 /* TABLE SCROLL WRAPPER */
-.table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; width: 100%; }
 
 /* RESPONSIVE — tablet: shrink table font */
 @media (max-width: 860px) {
@@ -191,7 +196,7 @@ footer { border-top: 1px solid var(--border); padding: 3rem 2rem; }
   .nav-links {
     display: none;
     position: absolute;
-    top: 64px; left: 0; right: 0;
+    top: 64px; left: 0; right: 0; width: 100vw;
     background: rgba(255,255,255,.98);
     backdrop-filter: blur(8px);
     border-bottom: 1px solid var(--border);
