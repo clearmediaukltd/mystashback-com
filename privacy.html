@@ -75,8 +75,8 @@
   <p>We do not sell your data. We do not use your store data for advertising or analytics.</p>
 
   <h2>4. Data storage and security</h2>
-  <p>Backup archives are stored in Cloudflare R2 object storage. Pro plan merchants have their backups stored in both US and EU regions simultaneously. Operational data (subscription records, job metadata) is stored in a PostgreSQL database hosted on Heroku.</p>
-  <p>Access to stored data is restricted to authenticated requests. Shopify access tokens are stored encrypted at rest.</p>
+  <p>Backup archives are stored in secure cloud object storage. Pro plan merchants have their backups replicated across both US and EU regions simultaneously. Operational data is stored in a managed cloud database.</p>
+  <p>All data is encrypted at rest. Access to stored data is restricted to authenticated requests. Shopify access tokens are stored encrypted.</p>
 
   <h2>5. Data retention</h2>
   <p>Backup archives are retained according to your plan's history limit (e.g. 30, 90, or 365 days). Older backups are automatically deleted when a new backup would exceed your plan's storage cap.</p>
@@ -96,13 +96,9 @@
   <p>Your backup archives contain personal data belonging to your customers (names, email addresses, order history). You are the data controller for this information; we process it as a data processor acting on your behalf.</p>
   <p>When Shopify notifies us of a customer data deletion request (<code>customers/redact</code>), we log the request. Note that backup archives are point-in-time snapshots stored as binary files — individual customer records cannot be selectively redacted from an existing archive. If a customer requests complete erasure, we recommend deleting all backup archives that may contain their data from within the app.</p>
 
-  <h2>8. Third-party services</h2>
-  <ul>
-    <li><strong>Shopify</strong> — we access your store via the Shopify Admin API under your authorisation. Shopify's privacy policy governs the Shopify platform.</li>
-    <li><strong>Cloudflare R2</strong> — used to store backup archives. Cloudflare's privacy policy applies.</li>
-    <li><strong>Heroku (Salesforce)</strong> — used to host the application and database. Heroku's privacy policy applies.</li>
-    <li><strong>SendGrid (Twilio)</strong> — used to send backup failure notification emails if you configure an email address. SendGrid's privacy policy applies.</li>
-  </ul>
+  <h2>8. Sub-processors</h2>
+  <p>We use trusted third-party cloud services to deliver Stashback, including providers for object storage, application hosting, database hosting, and email delivery. We also access your store via the Shopify Admin API under your authorisation.</p>
+  <p>All sub-processors are required to maintain appropriate data protection standards. For an up-to-date list of sub-processors, please <a href="contact.html">contact us</a>.</p>
 
   <h2>9. Cookies</h2>
   <p>The Stashback web app (embedded in Shopify admin) uses a session cookie to maintain your authenticated session. Our marketing website (mystashback.com) does not use tracking or analytics cookies.</p>

@@ -251,9 +251,6 @@
     <section class="help-section" id="cross-store">
       <h2>7. Claiming backups from a previous store</h2>
 
-      <h3>My old Shopify store was closed — can I still access my backups?</h3>
-      <p>Yes. If your previous store has been closed, suspended, or deleted, you can claim its backups into a new store using the <strong>cross-store claim</strong> feature.</p>
-
       <h3>How does claiming work?</h3>
       <ol>
         <li>Install Stashback on your new store.</li>
@@ -316,7 +313,7 @@
       <p>Backups older than your plan's retention period are automatically deleted. For example, on the Starter plan, backups older than 30 days are pruned after each new backup completes.</p>
 
       <h3>Where is my data stored?</h3>
-      <p>Backups are stored in Cloudflare R2 object storage (US region by default). Pro plans additionally replicate backups to an EU region bucket for dual-region redundancy.</p>
+      <p>Backups are stored in the US region by default. Pro plans additionally replicate backups to an EU region for dual-region redundancy.</p>
     </section>
 
     <!-- 10. Security -->
@@ -326,7 +323,7 @@
       <h3>Is my backup data encrypted?</h3>
       <p>Yes — all backup data is encrypted at rest. Stashback uses two layers of encryption:</p>
       <ul>
-        <li><strong>Storage-layer encryption (all plans):</strong> Cloudflare R2 encrypts every stored object using AES-256 at the storage layer by default. This is always on and requires no configuration.</li>
+        <li><strong>Storage-layer encryption (all plans):</strong> Every stored object is encrypted using AES-256 at the storage layer. This is always on and requires no configuration.</li>
         <li><strong>Application-layer encryption:</strong> Backups are additionally encrypted at the application level using AES-256-GCM before upload, so the storage provider only ever holds ciphertext. Each backup uses a unique random IV — keys are never reused.</li>
       </ul>
 
