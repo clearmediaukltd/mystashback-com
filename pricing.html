@@ -32,6 +32,7 @@
     .plan-th .price span { font-size: .8rem; font-weight: 400; color: var(--gray); }
     .plan-th .btn { margin-top: .75rem; display: block; }
     .featured-col { background: #f0fdf4; }
+    .plan-tagline { font-size: .78rem; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; color: var(--green); margin-bottom: .4rem; }
     .faq { background: var(--gray-light); padding: 4rem 2rem; }
     .faq-inner { max-width: 720px; margin: 0 auto; }
     .faq-item { border-bottom: 1px solid var(--border); padding: 1.5rem 0; }
@@ -58,8 +59,8 @@
 
 <div class="pricing-hero">
   <div class="hero-badge">Pricing</div>
-  <h1>Simple, transparent pricing</h1>
-  <p>Start free. Upgrade when you need more history, automation, or coverage.</p>
+  <h1>Recover from anything. In minutes.</h1>
+  <p>Accidentally deleted products? Bad app import? Theme update gone wrong?<br>Stashback keeps a complete snapshot of your store so you can undo mistakes and get back to selling — fast.</p>
 </div>
 
 <section class="pricing-section">
@@ -67,59 +68,61 @@
     <div class="pricing-grid">
       <div class="plan-card">
         <div class="plan-name">Free</div>
+        <div class="plan-tagline">Try it out</div>
         <div class="plan-price">$0</div>
-        <div class="plan-desc">For merchants who want peace of mind without a subscription.</div>
+        <div class="plan-desc">Start backing up your store today — no subscription, no credit card.</div>
         <ul class="plan-features">
-          <li>1 backup stored at a time</li>
-          <li>Manual backups (1/day)</li>
-          <li>Products, collections, pages, blogs, navigation, metaobjects, policies</li>
+          <li>1 manual backup per day</li>
+          <li>Covers products, collections, pages, blogs, navigation, metaobjects &amp; policies</li>
           <li>Data encrypted at rest</li>
         </ul>
         <a href="https://apps.shopify.com/stashback" class="btn btn-outline">Get started free</a>
       </div>
       <div class="plan-card">
         <div class="plan-name">Starter</div>
+        <div class="plan-tagline">Safe recovery</div>
         <div class="plan-price"><sup>$</sup>9<span>/mo</span></div>
-        <div class="plan-desc">For small stores that want automated daily backups and restore.</div>
+        <div class="plan-desc">Daily automated backups and a restore process designed to protect what you haven't changed.</div>
         <ul class="plan-features">
           <li>30-day backup history</li>
-          <li>Daily automated backups</li>
-          <li>One-click restore</li>
-          <li>2 GB storage</li>
-          <li>Products, collections, pages, blogs, navigation, metaobjects, policies</li>
+          <li>Daily automated backups — set it and forget it</li>
+          <li>Safe restore: adds back missing records and updates changed ones — without deleting anything else</li>
+          <li>Covers products, collections, pages, blogs, navigation, metaobjects &amp; policies</li>
           <li>Data encrypted at rest</li>
         </ul>
-        <a href="https://apps.shopify.com/stashback" class="btn btn-outline">Get started</a>
+        <a href="https://apps.shopify.com/stashback" class="btn btn-outline">Start for $9/mo</a>
       </div>
       <div class="plan-card featured">
         <div class="plan-badge">Most popular</div>
         <div class="plan-name">Growth</div>
+        <div class="plan-tagline">Precision + control</div>
         <div class="plan-price"><sup>$</sup>29<span>/mo</span></div>
-        <div class="plan-desc">For growing stores with orders, customers, and themes to protect.</div>
+        <div class="plan-desc">See exactly what will change before you restore. Built for stores where orders, customers, and themes are too important to get wrong.</div>
         <ul class="plan-features">
           <li>90-day backup history</li>
           <li>Daily automated backups</li>
-          <li>Full store coverage incl. orders, customers, themes, discounts</li>
-          <li>One-click restore</li>
-          <li>20 GB storage</li>
+          <li>Preview changes before you restore — see what will be added, updated, or skipped</li>
+          <li>Restore only what you need — roll back a single section or your entire store</li>
+          <li>Full coverage: orders, customers, themes &amp; discounts</li>
           <li>Data encrypted at rest</li>
         </ul>
-        <a href="https://apps.shopify.com/stashback" class="btn btn-primary">Get started</a>
+        <a href="https://apps.shopify.com/stashback" class="btn btn-primary">Start for $29/mo</a>
       </div>
       <div class="plan-card">
         <div class="plan-name">Pro</div>
+        <div class="plan-tagline">Maximum protection</div>
         <div class="plan-price"><sup>$</sup>79<span>/mo</span></div>
-        <div class="plan-desc">For high-volume stores that need maximum history and resilience.</div>
+        <div class="plan-desc">A full year of history, unlimited manual snapshots, and enterprise-grade redundancy. For stores where recovery speed and completeness aren't negotiable.</div>
         <ul class="plan-features">
-          <li>365-day backup history</li>
-          <li>Daily automated backups</li>
-          <li>Unlimited manual backups</li>
-          <li>Full store coverage incl. files, shipping, locations</li>
-          <li>Dual-region storage (US + EU)</li>
-          <li>100 GB storage</li>
+          <li>365-day backup history — go back up to a year</li>
+          <li>Unlimited manual backups — snapshot before any major change</li>
+          <li>Preview changes before you restore — see what will be added, updated, or skipped</li>
+          <li>Restore only what you need</li>
+          <li>Complete coverage: orders, customers, themes, files, shipping &amp; locations</li>
+          <li>Dual-region storage (US + EU) for maximum resilience</li>
           <li>Data encrypted at rest</li>
         </ul>
-        <a href="https://apps.shopify.com/stashback" class="btn btn-outline">Get started</a>
+        <a href="https://apps.shopify.com/stashback" class="btn btn-outline">Start for $79/mo</a>
       </div>
     </div>
 
@@ -151,13 +154,17 @@
         <tr><td>Shipping profiles &amp; locations</td><td class="dash">—</td><td class="dash">—</td><td class="featured-col dash">—</td><td class="check">✓</td></tr>
 
         <tr class="section-row"><td colspan="5">Restore &amp; resilience</td></tr>
-        <tr><td>One-click restore</td><td class="dash">—</td><td class="check">✓</td><td class="featured-col check">✓</td><td class="check">✓</td></tr>
+        <tr><td>Restore from any backup point</td><td class="dash">—</td><td class="check">✓</td><td class="featured-col check">✓</td><td class="check">✓</td></tr>
+        <tr><td>Safe restore (adds &amp; updates, never overwrites new data)</td><td class="dash">—</td><td class="check">✓</td><td class="featured-col check">✓</td><td class="check">✓</td></tr>
+        <tr><td>Preview changes before restoring</td><td class="dash">—</td><td class="dash">—</td><td class="featured-col check">✓</td><td class="check">✓</td></tr>
+        <tr><td>Restore only what you need</td><td class="dash">—</td><td class="dash">—</td><td class="featured-col check">✓</td><td class="check">✓</td></tr>
         <tr><td>Cross-store restore</td><td class="dash">—</td><td class="check">✓</td><td class="featured-col check">✓</td><td class="check">✓</td></tr>
-        <tr><td>Dual-region storage</td><td class="dash">—</td><td class="dash">—</td><td class="featured-col dash">—</td><td class="check">✓</td></tr>
+        <tr><td>Dual-region storage (US + EU)</td><td class="dash">—</td><td class="dash">—</td><td class="featured-col dash">—</td><td class="check">✓</td></tr>
         <tr><td>Failure email notifications</td><td class="check">✓</td><td class="check">✓</td><td class="featured-col check">✓</td><td class="check">✓</td></tr>
 
         <tr class="section-row"><td colspan="5">Security</td></tr>
         <tr><td>Data encrypted at rest</td><td class="check">✓</td><td class="check">✓</td><td class="featured-col check">✓</td><td class="check">✓</td></tr>
+        <tr><td>Data encrypted in transit</td><td class="check">✓</td><td class="check">✓</td><td class="featured-col check">✓</td><td class="check">✓</td></tr>
       </tbody>
     </table>
     </div>
