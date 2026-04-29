@@ -3,7 +3,8 @@
     "allow": [
       "Bash(git add:*)",
       "Bash(git commit -m ':*)",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "Bash(grep -n -i \"free plan\\\\|\\\\$9\\\\|\\\\$29\\\\|free forever\\\\|free tier\" /Users/chriscook/mystashback-com/help.html)"
     ]
   }
 }

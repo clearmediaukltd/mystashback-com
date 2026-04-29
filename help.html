@@ -115,8 +115,8 @@
       <h3>What happens after I install?</h3>
       <p>On your first visit you'll be asked whether you're starting a new store or want to claim backups from a previous store. If you're starting fresh, click <em>Start fresh</em> and you'll land on the dashboard. Your first manual backup is ready to run immediately.</p>
 
-      <h3>Does the Free plan cost anything?</h3>
-      <p>No. The Free plan is free forever. It gives you one manual backup per day so you can protect your store without a subscription. Upgrade any time to get automated schedules, longer history, and restore.</p>
+      <h3>Is there a free trial?</h3>
+      <p>Yes — every plan includes a 7-day free trial. You can install, run backups, and test the app at no charge until the trial ends. No credit card required to start.</p>
     </section>
 
     <!-- 2. Backups -->
@@ -130,7 +130,6 @@
       <table class="resource-table">
         <thead><tr><th>Plan</th><th>Manual backups per day</th></tr></thead>
         <tbody>
-          <tr><td>Free</td><td>1</td></tr>
           <tr><td>Starter</td><td>1</td></tr>
           <tr><td>Growth</td><td>3</td></tr>
           <tr><td>Pro</td><td>Unlimited</td></tr>
@@ -144,6 +143,9 @@
       <h3>Can I upload a backup file?</h3>
       <p>Yes. On the <strong>Backups</strong> page, click <em>Upload backup file</em> and select a <code>.tar.gz</code> file previously downloaded from Stashback. Once uploaded it appears in your backup history and can be used for a restore.</p>
 
+      <h3>Can I export customers or orders as a CSV?</h3>
+      <p>Yes. On the <strong>Backups</strong> page, any completed backup that includes customers or orders will show <em>Customers CSV</em> and <em>Orders CSV</em> export buttons next to that backup row. Click either button to download a CSV of that data from the backup.</p>
+
       <h3>How do I delete a backup?</h3>
       <p>On the <strong>Backups</strong> page, use the delete action on any backup row. Deletion is permanent — deleted backups cannot be recovered.</p>
     </section>
@@ -153,16 +155,21 @@
       <h2>3. Automated schedules</h2>
 
       <h3>How do I turn on automatic backups?</h3>
-      <p>Go to <strong>Schedule</strong> in the app navigation, toggle <em>Enable automatic backups</em>, choose your frequency, and click <strong>Save</strong>. Stashback will run backups on your schedule automatically — no action required.</p>
+      <p>Go to <strong>Schedule</strong> in the app navigation, choose your frequency, backup time, and retention period, then click <strong>Save &amp; Enable</strong>. Stashback will run backups on your schedule automatically — no action required.</p>
 
       <h3>What frequencies are available?</h3>
       <ul>
-        <li><strong>Daily</strong> — available on Starter, Growth, and Pro plans.</li>
+        <li><strong>Daily</strong></li>
+        <li><strong>Weekly</strong> — choose the day of the week</li>
+        <li><strong>Monthly</strong> — runs on the first occurrence of the chosen day each month</li>
       </ul>
-      <p>Automated scheduling is not available on the Free plan.</p>
+      <p>Automated scheduling requires a paid plan.</p>
 
-      <h3>What time zone are scheduled backups run in?</h3>
-      <p>Schedules run in UTC. The app displays the next and last backup times converted to your local browser time for convenience.</p>
+      <h3>Can I choose what time of day backups run?</h3>
+      <p>Yes. On the <strong>Schedule</strong> page you can select any hour (00:00–23:00 UTC) for your backups to run. The app shows the next and last run times converted to your local browser time.</p>
+
+      <h3>Can I set a custom retention period on my schedule?</h3>
+      <p>Yes. The Schedule page lets you configure how long backups are kept independently of your plan's maximum. Available options depend on your plan: 7, 14, or 30 days on Starter; additionally 90 days on Growth; and additionally 365 days on Pro. Backups older than the configured period are automatically deleted after each run.</p>
     </section>
 
     <!-- 4. What gets backed up -->
@@ -174,27 +181,27 @@
         <thead>
           <tr>
             <th>Resource</th>
-            <th>Free</th>
             <th>Starter</th>
             <th>Growth</th>
             <th>Pro</th>
           </tr>
         </thead>
         <tbody>
-          <tr><td>Products (variants, images, metafields, SEO)</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
-          <tr><td>Collections (smart &amp; manual)</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
-          <tr><td>Pages (HTML content, SEO)</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
-          <tr><td>Blogs &amp; articles</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
-          <tr><td>Navigation menus</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
-          <tr><td>Metaobjects &amp; definitions</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
-          <tr><td>Shop policies</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
-          <tr><td>Orders (line items, transactions, fulfillments)</td><td class="dash">—</td><td class="dash">—</td><td class="check">✓</td><td class="check">✓</td></tr>
-          <tr><td>Customers (addresses, tags, metafields)</td><td class="dash">—</td><td class="dash">—</td><td class="check">✓</td><td class="check">✓</td></tr>
-          <tr><td>Discounts &amp; price rules</td><td class="dash">—</td><td class="dash">—</td><td class="check">✓</td><td class="check">✓</td></tr>
-          <tr><td>Themes (all .liquid, .json, .css, .js assets)</td><td class="dash">—</td><td class="dash">—</td><td class="check">✓</td><td class="check">✓</td></tr>
-          <tr><td>Files (images, documents, video)</td><td class="dash">—</td><td class="dash">—</td><td class="dash">—</td><td class="check">✓</td></tr>
-          <tr><td>Shipping profiles &amp; zones</td><td class="dash">—</td><td class="dash">—</td><td class="dash">—</td><td class="check">✓</td></tr>
-          <tr><td>Locations &amp; inventory levels</td><td class="dash">—</td><td class="dash">—</td><td class="dash">—</td><td class="check">✓</td></tr>
+          <tr><td>Products (variants, images, metafields, SEO)</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+          <tr><td>Collections (smart &amp; manual)</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+          <tr><td>Pages (HTML content, SEO)</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+          <tr><td>Blogs &amp; articles</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+          <tr><td>Navigation menus</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+          <tr><td>Shop policies</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+          <tr><td>Redirects</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+          <tr><td>Orders (line items, transactions, fulfillments)</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+          <tr><td>Customers (addresses, tags, metafields)</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+          <tr><td>Metaobjects &amp; definitions</td><td class="dash">—</td><td class="check">✓</td><td class="check">✓</td></tr>
+          <tr><td>Discounts &amp; price rules</td><td class="dash">—</td><td class="check">✓</td><td class="check">✓</td></tr>
+          <tr><td>Themes (all .liquid, .json, .css, .js assets)</td><td class="dash">—</td><td class="check">✓</td><td class="check">✓</td></tr>
+          <tr><td>Files (images, documents, video)</td><td class="dash">—</td><td class="dash">—</td><td class="check">✓</td></tr>
+          <tr><td>Shipping profiles &amp; zones</td><td class="dash">—</td><td class="dash">—</td><td class="check">✓</td></tr>
+          <tr><td>Locations &amp; inventory levels</td><td class="dash">—</td><td class="dash">—</td><td class="check">✓</td></tr>
         </tbody>
       </table>
 
@@ -218,6 +225,9 @@
 
       <h3>What does a restore do to existing data?</h3>
       <p>Restore uses an <strong>upsert</strong> approach — it updates existing records if they match by handle (for most resources) or email (for customers), and creates them if they don't exist. It does not delete records that are present in your store but absent from the backup.</p>
+
+      <h3>Can I preview what will change before I restore?</h3>
+      <p>Yes, on <span class="plan-badge badge-growth">Growth</span> <span class="plan-badge badge-pro">Pro</span> plans. After selecting your resources in the restore modal, click <strong>Preview Changes</strong>. Stashback will analyse the backup without writing anything to your store, then show you exactly which records will be added or updated. You can then click <strong>Start Restore</strong> to apply the changes, or go back to adjust your selection.</p>
 
       <h3>Can I restore just some resource types?</h3>
       <p>Yes. The restore modal lets you choose individual resource types — for example, you can restore only Products and Collections without touching Customers or Themes.</p>
@@ -274,11 +284,11 @@
       <h3>What plans are available?</h3>
       <p>See the full comparison on the <a href="pricing.html">Pricing page</a>. In summary:</p>
       <ul>
-        <li><strong>Free ($0)</strong> — 1 manual backup/day, 1 backup stored, no restore.</li>
-        <li><strong>Starter ($9/mo)</strong> — Daily automated backups, 30-day history, restore, 2 GB storage.</li>
-        <li><strong>Growth ($29/mo)</strong> — Daily backups, 90-day history, full coverage incl. orders &amp; customers, restore, 20 GB storage.</li>
-        <li><strong>Pro ($79/mo)</strong> — Daily backups, 365-day history, all resources, dual-region storage, 100 GB.</li>
+        <li><strong>Starter ($19/mo)</strong> — Daily automated backups, 30-day history, products/collections/orders/customers/pages/blogs/navigation/policies/redirects, selective restore, 2 GB storage.</li>
+        <li><strong>Growth ($39/mo)</strong> — 90-day history, all Starter coverage plus metaobjects, discounts &amp; themes, preview restore, 20 GB storage.</li>
+        <li><strong>Pro ($79/mo)</strong> — 365-day history, all resources including files, shipping profiles, locations &amp; inventory, dual-region storage, 100 GB.</li>
       </ul>
+      <p>Every plan includes a 7-day free trial.</p>
 
       <h3>How do I upgrade or downgrade?</h3>
       <p>Go to <strong>Billing</strong> in the app and select a new plan. Upgrades take effect immediately. Billing is handled through Shopify's standard subscription system.</p>
@@ -298,7 +308,6 @@
       <table class="resource-table">
         <thead><tr><th>Plan</th><th>Storage cap</th><th>Retention</th></tr></thead>
         <tbody>
-          <tr><td>Free</td><td>—</td><td>1 backup (latest only)</td></tr>
           <tr><td>Starter</td><td>2 GB</td><td>30 days</td></tr>
           <tr><td>Growth</td><td>20 GB</td><td>90 days</td></tr>
           <tr><td>Pro</td><td>100 GB</td><td>365 days</td></tr>
@@ -337,11 +346,11 @@
     <section class="help-section" id="notifications">
       <h2>11. Failure notifications</h2>
 
-      <h3>How do I get notified if a backup fails?</h3>
-      <p>Go to <strong>Settings</strong> in the app, scroll to <em>Failure notifications</em>, enter your email address, and click <strong>Save</strong>. Stashback will send you an email whenever a scheduled or manual backup fails.</p>
+      <h3>How do I set up notifications?</h3>
+      <p>Go to <strong>Settings</strong> in the app, scroll to the <em>Notifications</em> section, enter your email address, and click <strong>Save</strong>. A 6-digit verification code will be sent to that address — enter the code in the app to confirm it. Once verified, Stashback will email you whenever a backup fails, and when your storage reaches 80% of your plan's limit (at most once every 7 days).</p>
 
       <h3>How do I test that notifications are working?</h3>
-      <p>Once you've saved your email address, a <em>Send test email</em> button appears in the same section. Click it to receive a test notification immediately.</p>
+      <p>Once your email address is verified, a <em>Send test email</em> button appears in the Notifications section. Click it to receive a test notification immediately.</p>
     </section>
 
     <!-- 12. Contact -->
