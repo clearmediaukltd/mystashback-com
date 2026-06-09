@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Backup Coverage — Stashback</title>
+  <meta name="description" content="See exactly what Stashback backs up and restores for your Shopify store — products, orders, customers, themes, and more — by plan." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon-32x32.png" type="image/png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <style>
+    .coverage-hero { background: linear-gradient(160deg, #f0fdf4 0%, #f8fafc 60%); padding: 5rem 2rem 4rem; text-align: center; }
+    .coverage-hero h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; color: var(--navy); margin-bottom: 1rem; }
+    .coverage-hero p { font-size: 1.1rem; color: var(--gray); max-width: 560px; margin: 0 auto; }
+
+    .coverage-body { max-width: 960px; margin: 0 auto; padding: 4rem 2rem 5rem; }
+
+    .coverage-section { margin-bottom: 3.5rem; }
+    .coverage-section h2 { font-size: 1.2rem; font-weight: 800; color: var(--navy); border-bottom: 2px solid var(--border); padding-bottom: .6rem; margin-bottom: 1.25rem; display: flex; align-items: center; gap: .6rem; flex-wrap: wrap; }
+
+    .plan-badge { display: inline-block; font-size: .72rem; font-weight: 700; padding: .15rem .5rem; border-radius: 4px; vertical-align: middle; text-transform: uppercase; letter-spacing: .04em; }
+    .badge-starter { background: #e0f2fe; color: #0369a1; }
+    .badge-growth  { background: #dcfce7; color: #166534; }
+    .badge-pro     { background: #ede9fe; color: #6d28d9; }
+
+    .coverage-table { width: 100%; border-collapse: collapse; font-size: .9rem; margin-bottom: .5rem; }
+    .coverage-table th { text-align: left; padding: .6rem .75rem; border-bottom: 2px solid var(--border); color: var(--navy); font-weight: 700; font-size: .85rem; }
+    .coverage-table th:nth-child(2) { width: 9rem; text-align: center; }
+    .coverage-table td { padding: .6rem .75rem; border-bottom: 1px solid var(--border); color: var(--text); vertical-align: top; }
+    .coverage-table tr:last-child td { border-bottom: none; }
+    .coverage-table td:nth-child(2) { text-align: center; }
+    .coverage-table td:first-child { font-weight: 600; color: var(--navy); white-space: nowrap; }
+    .coverage-table td:last-child { font-size: .85rem; color: var(--gray); }
+    .check { color: var(--green); font-weight: 700; }
+    .no    { color: #dc2626; font-weight: 700; }
+
+    .help-note    { background: #f0fdf4; border-left: 4px solid var(--green); border-radius: 0 8px 8px 0; padding: .9rem 1.1rem; margin: 1.5rem 0; font-size: .92rem; color: var(--navy); line-height: 1.6; }
+    .help-warning { background: #fffbeb; border-left: 4px solid #f59e0b; border-radius: 0 8px 8px 0; padding: .9rem 1.1rem; margin: 1.5rem 0; font-size: .92rem; color: #78350f; line-height: 1.6; }
+
+    .not-included { font-size: .92rem; color: var(--text); line-height: 1.7; }
+    .not-included ul { padding-left: 1.4rem; margin-top: .5rem; }
+    .not-included li { margin-bottom: .3rem; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="/"><img src="mystashback-logo.svg" alt="Stashback" class="logo-img"></a>
+    <ul class="nav-links">
+      <li><a href="index.html#features">Features</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="backup-coverage.html">Coverage</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="help.html">Help</a></li>
+      <li><a href="https://apps.shopify.com/stashback" class="btn btn-primary">Install free</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="coverage-hero">
+  <div class="hero-badge">Backup Coverage</div>
+  <h1>What Stashback backs up</h1>
+  <p>Coverage depends on your plan. Here's exactly what's included at each tier, whether it can be restored, and any limitations worth knowing.</p>
+</div>
+
+<div class="coverage-body">
+
+  <!-- All Plans -->
+  <section class="coverage-section">
+    <h2>
+      All plans
+      <span class="plan-badge badge-starter">Starter</span>
+      <span class="plan-badge badge-growth">Growth</span>
+      <span class="plan-badge badge-pro">Pro</span>
+    </h2>
+    <table class="coverage-table">
+      <thead>
+        <tr>
+          <th>Resource</th>
+          <th>Restorable</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Products</td>
+          <td class="check">✓</td>
+          <td>Variants, images, media, metafields, and SEO. Images are downloaded into the backup so they're preserved even if the original is later deleted.</td>
+        </tr>
+        <tr>
+          <td>Collections</td>
+          <td class="check">✓</td>
+          <td>Smart (rule-based) and manual collections, including product membership. Publication channels (e.g. Online Store) are matched by name on restore.</td>
+        </tr>
+        <tr>
+          <td>Pages</td>
+          <td class="check">✓</td>
+          <td>Full HTML content, SEO title and description, template suffix.</td>
+        </tr>
+        <tr>
+          <td>Blogs &amp; articles</td>
+          <td class="check">✓</td>
+          <td>Blog structure and all articles, including author, tags, featured image, and metafields. Article images are downloaded into the backup.</td>
+        </tr>
+        <tr>
+          <td>Navigation</td>
+          <td class="check">✓</td>
+          <td>Up to 3 levels of menu items. Items are restored as generic links — resource-typed items (e.g. direct product or collection links) will need re-linking after restore.</td>
+        </tr>
+        <tr>
+          <td>Policies</td>
+          <td class="check">✓</td>
+          <td>All shop policies (refund, privacy, shipping, etc.).</td>
+        </tr>
+        <tr>
+          <td>Redirects</td>
+          <td class="check">✓</td>
+          <td>All URL redirects. Complete coverage.</td>
+        </tr>
+        <tr>
+          <td>Customers</td>
+          <td class="check">✓</td>
+          <td>Profile, addresses, tags, metafields, and marketing consent. Addresses are only written for customers being created (not updated). Customers must reset their password on first login — passwords are never exposed by Shopify's API.</td>
+        </tr>
+        <tr>
+          <td>Orders</td>
+          <td class="no">Read-only</td>
+          <td>Order data is captured for reference and export. Shopify does not allow historical orders to be re-created via its API, so orders cannot be restored into your store.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Growth+ -->
+  <section class="coverage-section">
+    <h2>
+      Growth and above
+      <span class="plan-badge badge-growth">Growth</span>
+      <span class="plan-badge badge-pro">Pro</span>
+    </h2>
+    <table class="coverage-table">
+      <thead>
+        <tr>
+          <th>Resource</th>
+          <th>Restorable</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Metaobjects</td>
+          <td class="check">✓</td>
+          <td>Both definitions (types, fields, validations) and all entries. Complete coverage.</td>
+        </tr>
+        <tr>
+          <td>Discounts</td>
+          <td class="check">✓</td>
+          <td>Percentage, fixed amount, buy X get Y, and free shipping discounts. Product and customer targeting is not restored — discounts apply store-wide after restore. Expired discounts are skipped. Discounts managed by apps (Discount Functions) are backed up but cannot be restored.</td>
+        </tr>
+        <tr>
+          <td>Themes</td>
+          <td class="check">✓</td>
+          <td>All theme files — Liquid templates, JSON settings, CSS, JS, and image assets. Restored as a new unpublished theme so your live storefront is never overwritten.</td>
+        </tr>
+        <tr>
+          <td>Draft orders</td>
+          <td class="check">✓</td>
+          <td>Open draft orders including line items, discounts, customer details, and shipping. Drafts that have already been completed (converted to orders) are skipped on restore.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Pro only -->
+  <section class="coverage-section">
+    <h2>
+      Pro only
+      <span class="plan-badge badge-pro">Pro</span>
+    </h2>
+    <table class="coverage-table">
+      <thead>
+        <tr>
+          <th>Resource</th>
+          <th>Restorable</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Files &amp; media</td>
+          <td class="check">✓</td>
+          <td>All files in your Shopify Files library — images, documents, and videos. Videos are restored by re-importing from the original source URL; if that URL is no longer accessible the video cannot be restored.</td>
+        </tr>
+        <tr>
+          <td>Shipping profiles</td>
+          <td class="check">✓</td>
+          <td>Zones, countries, and flat-rate shipping methods. Carrier-calculated rates are not included. Product-to-profile assignments are not captured.</td>
+        </tr>
+        <tr>
+          <td>Locations</td>
+          <td class="check">✓</td>
+          <td>Location name, address, and active status. Locations are matched by name on restore. Deactivation is not applied during restore to avoid leaving a store with no active location.</td>
+        </tr>
+        <tr>
+          <td>Inventory levels</td>
+          <td class="check">✓</td>
+          <td>Available stock quantity per variant per location. Only "available" quantity is restored — committed and incoming stock counts are not. Variants are matched by product handle and option values.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Not included -->
+  <section class="coverage-section">
+    <h2>Not included</h2>
+    <div class="not-included">
+      <p>The following are not currently backed up by Stashback:</p>
+      <ul>
+        <li><strong>Gift cards</strong> — gift card balances and expiry can be captured, but original codes are masked by Shopify and cannot be preserved.</li>
+        <li><strong>Third-party app data</strong> — data owned by other apps (reviews, loyalty points, subscriptions) is not accessible to Stashback.</li>
+        <li><strong>Shopify Payments &amp; transactions</strong> — payment records and transaction history are read-only and cannot be exported or restored.</li>
+        <li><strong>Markets, catalogs, and B2B (Companies)</strong> — niche features; not yet covered.</li>
+        <li><strong>Shop settings</strong> — currency, timezone, and other store settings are readable but cannot be restored via Shopify's API.</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="help-warning">
+    <strong>API limitations:</strong> Some restore gaps above — such as orders and customer passwords — are hard limits imposed by Shopify's API, not Stashback limitations. They cannot be worked around. See the <a href="help.html#restore-limitations">restore limitations</a> section of the Help page for the full list.
+  </div>
+
+  <div style="text-align:center; margin-top: 3rem;">
+    <p style="font-size:.95rem; color:var(--gray); margin-bottom:1.25rem;">Need more detail on what each plan includes?</p>
+    <a href="pricing.html" class="btn btn-outline" style="margin-right:.75rem;">Compare plans</a>
+    <a href="https://apps.shopify.com/stashback" class="btn btn-primary">Install free on Shopify</a>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a class="nav-logo" href="/"><img src="mystashback-logo.svg" alt="Stashback" class="logo-img"></a>
+      <p>Disaster recovery and backup for Shopify stores.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Product</h4>
+      <ul>
+        <li><a href="index.html#features">Features</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="backup-coverage.html">Backup coverage</a></li>
+        <li><a href="https://apps.shopify.com/stashback">Install on Shopify</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="help.html">Help</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms of Service</a></li>
+        <li><a href="security.html">Security</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Stashback. All rights reserved.</span>
+    <span><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="security.html">Security</a></span>
+  </div>
+</footer>
+
+<script src="js/nav.js"></script>
+</body>
+</html>
