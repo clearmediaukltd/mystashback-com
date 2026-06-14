@@ -22,15 +22,34 @@
       <li><a href="backup-coverage.html">Coverage</a></li>
       <li><a href="contact.html">Contact</a></li>
       <li><a href="help.html">Help</a></li>
-      <li><a href="https://apps.shopify.com/stashback" class="btn btn-primary">Install free</a></li>
+      <li><a href="https://apps.shopify.com/stashback" class="btn btn-primary">Start free trial</a></li>
     </ul>
     <button class="nav-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
 </nav>
 
 <div class="policy">
-  <h1>Security Incident Response Policy</h1>
+  <h1>Security</h1>
   <p class="updated">Last updated: May 2026</p>
+
+  <h2>How we protect your backup data</h2>
+
+  <h3>Application-layer encryption (AES-256-GCM)</h3>
+  <p>Every backup archive is encrypted with AES-256-GCM before it is uploaded to cloud storage. This means your storage provider — Cloudflare R2 — receives only ciphertext and cannot read your backup data. Each backup uses a unique randomly generated IV, and the GCM authentication tag ensures any tampering is detected on restore.</p>
+  <p>This is a layer on top of Cloudflare R2's own storage-layer encryption (AES-256 at rest). Your data is encrypted twice: once by Stashback before upload, and once by the storage provider at rest.</p>
+
+  <h3>Dual-region storage (Pro plans)</h3>
+  <p>Pro plan backups are replicated in real time to both a US and an EU Cloudflare R2 data centre. A regional outage or object-level corruption in one region does not affect your ability to restore from the other.</p>
+
+  <h3>Download security</h3>
+  <p>Backup download links are HMAC-signed with a short expiry. Unsigned or expired links are rejected. Backup files are served in their encrypted form — decryption happens only at restore time, within the application.</p>
+
+  <h3>Access controls</h3>
+  <p>Only the Shopify store that created a backup can access or restore it. Cross-store access requires explicit claim verification via a private key shown only to the original store owner. Admin access to merchant data is restricted by role (administrator / support) and all admin actions are recorded in an immutable audit log.</p>
+
+  <hr style="margin: 2.5rem 0; border: none; border-top: 1px solid var(--border);" />
+
+  <h1>Security Incident Response Policy</h1>
 
   <p>This policy describes how Stashback identifies, responds to, and communicates security incidents affecting merchant or customer data.</p>
 
